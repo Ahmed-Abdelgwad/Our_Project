@@ -1,0 +1,73 @@
+'''
+Polymorphism is a fundamental concept in object-oriented programming (OOP) and computer science in general.
+It refers to the ability of different objects or classes to respond to the same message or method call in a way 
+that is specific to their individual types. Polymorphism enables code to be more flexible, reusable, and extensible, 
+making it a key principle in OOP.
+'''
+# Polymorphism means that an operation can be performed on different data types without changing the code of the program,
+
+
+class Animal:
+    def __init__(self, name):
+
+        self.name = name
+
+        print(f"The animal's name is {self.name}")
+
+
+class Fish(Animal):
+    # class Fish inherits from the parent class 'animal'
+    def __init(self, name):
+
+        Animal.__init__(self, name)
+
+        print(f"from class Fish {self.name}")
+
+
+# creating an instance of fish using its child class
+fishy1 = Animal('dog')
+fishy = Fish("Fishy")
+# print(fishy)
+
+# -------------------------------------------------
+# -- Object Oriented Programming => Polymorphism --
+# -------------------------------------------------
+
+n1 = 10
+n2 = 20
+
+print(n1 + n2)
+
+s1 = "Hello"
+s2 = "Python"
+
+print(s1 + " " + s2)
+
+print(len([1, 2, 3, 4, 5, 6]))
+print(len("Osama Elzero"))
+print(len({"Key_One": 1, "Key_Two": 2}))
+
+
+class A:
+
+    def do_something(self):
+
+        print("From Class A")
+
+        raise NotImplementedError("Derived Class Must Implement This Method")
+
+
+class B(A):
+
+    pass
+
+
+class C(A):
+
+    def do_something(self):
+
+        print("From Class C")
+
+
+my_instance = C()
+my_instance.do_something()
